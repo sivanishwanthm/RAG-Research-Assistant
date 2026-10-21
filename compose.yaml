@@ -1,0 +1,28 @@
+services:
+  research-assistant:
+    build: .
+    ports:
+      - "127.0.0.1:8501:8501"
+    environment:
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      RAG_REQUIRE_AUTH: ${RAG_REQUIRE_AUTH:-false}
+      RAG_ALLOWED_EMAILS: ${RAG_ALLOWED_EMAILS:-}
+      RAG_ALLOWED_LLM_HOSTS: ${RAG_ALLOWED_LLM_HOSTS:-}
+      RAG_DATABASE: /app/chroma_db
+    volumes:
+      - ./chroma_db:/app/chroma_db
+      - ./evaluation_results:/app/evaluation_results
+      - model-cache:/home/app/.cache/huggingface
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    restart: unless-stopped
+volumes:
+  model-cache:

@@ -1,0 +1,21 @@
+# RAG orchestration and document splitting
+langchain==1.4.2
+langchain-community==0.4.2
+langchain-text-splitters==1.1.2
+
+# Local vector storage and embeddings
+chromadb==1.5.9
+langchain-chroma==1.1.0
+langchain-huggingface==1.2.2
+sentence-transformers==6.1.0
+langchain-docling==0.1.0
+# Local LLM integration (requires a separately downloaded Ollama model)
+langchain-ollama==1.1.0
+langchain-openai==1.2.0
+# PDF ingestion, configuration, and notebooks
+pypdf==6.19.0
+python-dotenv==1.2.3
+ipykernel==7.3.0
+
+# BM25 keyword retrieval for hybrid search
+rank-bm25==0.2.2
