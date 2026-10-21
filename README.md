@@ -4,7 +4,7 @@
 
 Built with **Python · Streamlit · ChromaDB · Sentence Transformers · BM25**.
 
-> **Live demo:** Deployment pending. The verified public URL will be added here after Streamlit Community Cloud finishes deploying.
+> **Live demo:** [Open Paper Desk](https://rag-research-assistant-4wqlhbzznxhucyiqckmnqt.streamlit.app)
 
 ## What you can do
 
