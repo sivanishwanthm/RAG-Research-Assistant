@@ -2,6 +2,8 @@
 
 A local Streamlit research workspace with PDF/arXiv ingestion, Chroma storage, semantic + BM25 retrieval, cross-encoder reranking, cited answers, and paper summaries. No notebook execution is needed.
 
+See [README.md](README.md) for the architecture flowchart and Streamlit Community Cloud deployment steps. App dependencies are in `requirements.txt`; notebook-only dependencies are in `requirements-notebook.txt`.
+
 ## Run locally
 
 ```sh
